@@ -4,7 +4,7 @@ module Paymill
 
     def initialize( arguments = {} )
       arguments.each do |key, value|
-        raise ArgumentError.new( "parameter #{key} is not allowed" ) unless Address.instance_methods( false ).include? key
+        raise ArgumentError.new( "parameter #{key} is not allowed" ) unless Address.instance_methods( false ).include? key.to_sym
         instance_variable_set( "@#{key}", ( Integer( value ) rescue value ) )
       end
     end
