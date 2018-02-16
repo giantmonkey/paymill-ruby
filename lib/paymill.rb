@@ -9,6 +9,7 @@ module Paymill
   API_BASE      = 'api.paymill.com'
 
   autoload :Address,              'paymill/models/address'
+  autoload :BillingAddress,       'paymill/models/billing_address'
   autoload :Base,                 'paymill/models/base'
   autoload :Checksum,             'paymill/models/checksum'
   autoload :Client,               'paymill/models/client'
